@@ -1,3 +1,15 @@
+name: Build and Deploy 98tang to Docker
+
+on:
+  # 自动触发条件
+  push:
+    branches:
+      - main  # 当推送到 main 分支时触发
+  pull_request:
+    branches:
+      - main  # 当向 main 分支发起 PR 时触发
+  workflow_dispatch:  # 允许手动触发工作流
+  
 jobs:
   build:
     runs-on: ubuntu-latest
